@@ -10,11 +10,11 @@
      * Github: JL-Samper
 
 # Abstract
-Retinal affections is one of the major causes of blindness in the population. Early detection and appropiate treatment are crucial to stop the progress of the illness. Diagnoses relies on the expertise and visual acuteness of the ophthalmologist to detect retinal symptoms [xx]. The oculist checks the retina of both eyes by using special magnifying glasses and scan images, which alongside the patient's records provide information enough to detect the illness in most of the cases. However, a part of the population is highly exposed to late detection either by inability to afford the medical examination, lack of awareness or retina experts high-occupation. 
+Retinal affections is one of the major causes of blindness in the population. Early detection and appropiate treatment are crucial to stop the progress of the illness. Diagnoses relies on the expertise and visual acuteness of the ophthalmologist to detect retinal symptoms [1]. The oculist checks the retina of both eyes by using special magnifying glasses and scan images, which alongside the patient's records provide information enough to detect the illness in most of the cases. However, a part of the population is highly exposed to late detection either by inability to afford the medical examination, lack of awareness or retina experts high-occupation. 
 
-Among retinal affections, Diabetic Retinopathy (DR) has a high incidence rate [xxx]. During the last decade, big efforts have been done to obtain machine learning models able to detect the illness and diagnose it, like the population of journal articles and competitions denote. A successfull and useful diagnosis system should not only have a high accuracy, but also deliver scalability, data safety and usability. In this regard, a multiplatform application for retinal imaging diagnoses that applies federated learning methods can have a real impact and migration to real scenearios where medical personnel and patients interact with it.  
+Among retinal affections, Diabetic Retinopathy (DR) has a high incidence rate [2]. During the last decade, big efforts have been done to obtain machine learning models able to detect the illness and diagnose it, like the population of journal articles and competitions denote. A successfull and useful diagnosis system should not only have a high accuracy, but also deliver scalability, data safety and usability. In this regard, a multiplatform application for retinal imaging diagnoses that applies federated learning methods can have a real impact and migration to real scenearios where medical personnel and patients interact with it.  
 
-In this document we present a federated learning application that serves from state of the art methods for image recognition and classification to diagnose degenerative retinopathy. The system detects five different states of the retina and can be embedded in different devices, from computers to embedded boards. Currently, we are focusing on raspberry pi 4, and pc, but the future prospect also includes migration to mobile devices and other boards.
+In this document we present a federated learning application that serves from state of the art methods for image recognition and classification to diagnose diabetic retinopathy. The system detects five different states of the retina and can be embedded in different devices, from computers to embedded boards. Currently, we are focusing on raspberry pi 4, and pc, but the future prospect also includes migration to mobile devices and other boards.
 
 # Introduction
 
@@ -61,6 +61,7 @@ To approach such an architecture we have 2 PCs, one running Ubuntu Bionic and an
 
 The federated learning environment is done with PySyft following OpenMined guidelines for websockets. After troubleshooting some issues with raspberry pi 4 installation and power sortages we have been able to run a simple example for MNIST dataset using websockets between OSX and RPi4. We are starting the implementation of the transfer-learning neural algorihtm, explained in previous subsection, in this scheme. 
 
+![alt_text](https://media.discordapp.net/attachments/602098962719309856/613348507356626957/unknown.png)
 
 # Troubleshooting and guides
 
@@ -76,8 +77,8 @@ During Raspberry Pi 4 set up with PySyft and Pytorch some issues have been found
     > xserver-command=X -s 0 -dpms 
     > to /etc/lightdm/lightdm.conf the file. 
 - If your Rpi randomly shuts down or keeps blanking screen after applying previous modifications, you may have a power supply issue either by hdmi faulty cable or power adapter failure. 
-- Bear in mind that there is a connection issue at the power connector of Pi4 that can produce overheating and faulty events if the power source is not the one specified by the manufacturer as stated in forums. 
-- If the board keeps failing, try to replace it for a new one you may have a defectuous one. Many posts have recently appear in this regard in [official forums].
+- Bear in mind that there is a connection issue at the power connector of Pi4 that can produce overheating and faulty events if the power source is not the one specified by the manufacturer as [stated in different sources](https://hackaday.com/2019/07/16/exploring-the-raspberry-pi-4-usb-c-issue-in-depth/). 
+- If the board keeps failing, try to replace it for a new one you may have a defectuous one. Many posts have recently appear in this regard in [forums](https://hackaday.com/2019/06/28/power-to-the-pi-4-some-chargers-may-not-make-the-grade/).
 
 # References
 [1] Venkata SM Gudlavalleti  et al. "Public health system integration of avoidable blindness screening and management, India". Bulletin of the World Health Organization . Aug 2018. [Online] https://www.who.int/bulletin/volumes/96/10/18-212167/en/

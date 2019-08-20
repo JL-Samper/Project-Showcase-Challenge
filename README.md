@@ -1,7 +1,7 @@
 # Project-Showcase-Challenge: A Federated approach for Degenerative Retinopathy diagnosis 
-Udacity and Facebook Private and Secure AI Challenge
+##### Udacity and Facebook Private and Secure AI Challenge
 
-# Developers:
+### Developers:
 - ThienAn
      * Slack user: ThienAn
      * Github: thienan092
@@ -55,7 +55,11 @@ Some authors like Fleming[5] and Habib[6] have reported the benefits in assemble
 
 #### Federated Learning
 
+The system proposed can be used by medical personnel as assistance and patients that are under risk given their medical record. We have also considered the usage in third-world countries and communities without access to retinal experts. Therefore, we need a secure server and at least one server of the model trained model. This server communicates with client workers that can be around the world in different devices. All the image data and parameters are considered sensitive information that could be hacked to obtain medical records from individual, in consequence, we are using a privacy worker for encryption.
 
+To approach such an architecture we have 2 PCs, one running Ubuntu Bionic and another running OS X Mojave and a Raspberry Pi 4. We also have a Raspberry Pi Zero which will be added to the architecture later. We would like to evaluate performance and adaptability of the system to different specs since it can have a huge impact on commercialisation and adaption to poor countries. 
+
+The federated learning environment is done with PySyft following OpenMined guidelines for websockets. After troubleshooting some issues with raspberry pi 4 installation and power sortages we have been able to run a simple example for MNIST dataset using websockets between OSX and RPi4. We are starting the implementation of the transfer-learning neural algorihtm, explained in previous subsection, in this scheme. 
 
 
 # Troubleshooting and guides

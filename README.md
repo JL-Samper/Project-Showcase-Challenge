@@ -36,9 +36,9 @@ In consequence, there is a great interest in obtaining neural models for retinal
 
 The system can be mainly divided in two parts: the neural network and the federated environment. The former covers the design of the neural algorithm and its performance for DR diagnosis using [kaggle datasets](https://www.kaggle.com/benjaminwarner/resized-2015-2019-blindness-detection-images), whereas the latter covers the integration of the neural network in a federated architecture. The whole development have been done with PyTorch and PySyft. 
 
-##### Neural Network Implementation
+#### Neural Network Implementation
 
-GAN is the neural network currently in use after evaluating its performance alongside a 2-layer convnet and transfer learning with densenet121. The dataset provides two images of the retina of each eye (that's important since natural eye lessions commonly appear in both eyes which can be evaluated in future improvements). There are five labels or classes to diagnose the retina:
+infoGAN[13] and transfer learning with VGG16[12] are the neural networks currently in use after evaluating its performance alongside a 2-layer convnet and transfer learning with densenet121. The dataset provides two images of the retina of each eye (that's important since natural eye lessions commonly appear in both eyes which can be evaluated in future improvements). There are five labels or classes to diagnose the retina:
 - No retinopathy
 - Mild nonproliferative retinopathy
 - Moderate nonproliferative retinopathy
@@ -48,12 +48,13 @@ GAN is the neural network currently in use after evaluating its performance alon
 The dataset is not evenly-representative of these labels. As the following chart illustrates, healthy eyes are predominant:
 ![alt_text](https://cdn.discordapp.com/attachments/602098962719309856/604644893884940289/unknown.png)
 
-To avoid bias and overfitting towards healthy eyes, we have downsized the dataset to have an evenly-distributed population of samples. Additionally, images are preprocessed to avoid format-related bias [13] by applying crop and normalization methods. 
+To avoid bias and overfitting towards healthy eyes, we have downsized the dataset to have an evenly-distributed population of samples. Additionally, images are preprocessed to avoid format-related bias [14] by applying crop and normalization methods. 
 The accuracy obtained has been 
 
 Some authors like Fleming[5] and Habib[6] have reported the benefits in assembled classification when applying vessel removal and an exhaustive preprocessing to highlight the retinal symptons under study. In our opinion, adding a red-color discriminant, fundus correction and vessel extraction can boost accuracy since the result will provide a simplified image with the imperfections of the retina. We will also have to deal with the induced artifacts resulting from the preprocessing algorithm as other authors have already stated [6]. We are currently working on this implementations which we plan to carry out with OpenCV and PyTorch. 
 
-### Federated Learning
+#### Federated Learning
+
 
 
 
@@ -84,4 +85,6 @@ Some authors like Fleming[5] and Habib[6] have reported the benefits in assemble
 
 [12] Manal Al Ghamdi et al. " Semi-supervised Transfer Learning for Convolutional Neural Networks for Glaucoma Detection".  ICASSP 2019 - 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). May 2019.  
 
-[13] Tom Aindow. "Be careful what you train on. Kaggle APTOS competitions". [Online] https://www.kaggle.com/taindow/be-careful-what-you-train-on
+[13] Jefferson L. P. Lima et al. "Heartbeat Anomaly Detectionusing Adversarial Oversampling". arXiv preprint arXiv:1901.09972.
+
+[14] Tom Aindow. "Be careful what you train on. Kaggle APTOS competitions". [Online] https://www.kaggle.com/taindow/be-careful-what-you-train-on

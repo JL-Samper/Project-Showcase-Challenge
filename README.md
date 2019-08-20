@@ -3,11 +3,11 @@ Udacity and Facebook Private and Secure AI Challenge
 
 # Developers:
 - ThienAn. 
-      Slack user: ThienAn.
-      Github: thienan092
+      * Slack user: ThienAn.
+      * Github: thienan092
 - José Luis Samper. (jluis.samper@gmail.com).
-      Slack user: J. Luis Samper.
-      Github: JL-Samper
+      * Slack user: J. Luis Samper.
+      * Github: JL-Samper
 
 # Abstract
 Retinal affections is one of the major causes of blindness in the population. Early detection and appropiate treatment are crucial to stop the progress of the illness. Diagnoses relies on the expertise and visual acuteness of the ophthalmologist to detect retinal symptoms [xx]. The oculist checks the retina of both eyes by using special magnifying glasses and scan images, which alongside the patient's records provide information enough to detect the illness in most of the cases. However, a part of the population is highly exposed to late detection either by inability to afford the medical examination, lack of awareness or retina experts high-occupation. 
@@ -33,6 +33,28 @@ Similar results have already been obtained for glaucoma. Glaucoma is an affectio
 In consequence, there is a great interest in obtaining neural models for retinal disease diagnosis and the results are promising. Deep Learning and technological development allow designing complexer models that push performance forward. However, there are important topics that have to be addressed in order to migrate these systems to society which can hamper the adoption of the technology by the big public. These topics are related with real-case implementation, user's privacy and safety. To our knowledge, there is no specific work already done to approach a federated learning model that diagnoses retinal affections while preserves user's privacy. In this project we create a federated learning architecture with a pc and a raspberry pi 4 that hosts several workers to diagnose diabetic retinopathy. Additionally, different neural models have been evaluated to boost performance which currently include: simple convolutional networks (2 to six layers), high-depth convolutional models and GANs.   The system are trained and tested using Kaggle competition databases for DR detection from 2015 and 2019.
 
 # System Overview
+
+The system can be mainly divided in two parts: the neural network and the federated environment. The former covers the design of the neural algorithm and its performance for DR diagnosis using kaggle datasets (), whereas the latter covers the integration of the neural network in a federated architecture. The whole development have been done with PyTorch and PySyft. 
+
+##### Neural Network Implementation
+
+GAN is the neural network currently in use after evaluating its performance alongside a 2-layer convnet and transfer learning with densenet121. The dataset provides two images of the retina of each eye (that's important since natural eye lessions commonly appear in both eyes which can be evaluated in future improvements). There are five labels or classes to diagnose the retina:
+- No retinopathy
+- Mild nonproliferative retinopathy
+- Moderate nonproliferative retinopathy
+- Severe nonproliferative retinopathy
+- Proliferative retinopathy
+
+The dataset is not evenly-representative of these labels. As the following chart illustrates, healthy eyes are predominant:
+![alt_text](https://cdn.discordapp.com/attachments/602098962719309856/604644893884940289/unknown.png)
+
+To avoid bias and overfitting towards healthy eyes, we have downsized the dataset to have an evenly-distributed population of samples. Additionally, images are preprocessed to avoid format-related bias [13] by applying crop and normalization methods. 
+The accuracy obtained has been
+Some authors like Fleming[5] and Habib[6] have reported the benefits in assembled classification when applying vessel removal and an exhaustive preprocessing to highlight the retinal symptons under study. In our opinion, adding a red-color discriminant, fundus correction and vessel extraction can boost accuracy since the result will provide a simplified image with the imperfections of the retina. We will also have to deal with the induced artifacts resulting from the preprocessing algorithm as other authors have already stated [6]. We are currently working on this implementations which we plan to carry out with OpenCV and PyTorch. 
+
+### Federated Learning
+
+
 
 # Results
 

@@ -64,6 +64,16 @@ The federated learning environment is done with PySyft following OpenMined guide
 
 # Troubleshooting and guides
 
+During Raspberry Pi 4 set up with PySyft and Pytorch some issues have been found. We have based on [OpenMined Tutorial](https://blog.openmined.org/federated-learning-of-a-rnn-on-raspberry-pis/) to set RPi 3B+ for federated RNN. Issues and troubleshooting that we have faced can be sum up as follows:
+
+- Pytorch and Syft wheels in pip3 work properly but you need to pay attention to the version installed. The best options is forcing the installation of the version you need to this end check [syft requirements](). If you don't force the installation you may end with a torch version like "vX.X.XX.post2" which will create several issues in further wheels installations. 
+- Upgrade pip version installed with raspbian so new dependencies and wheel can be found.
+- Avoid screen blanking by installing xscreensaver and disabling screensaver (Preferences --> screensaver)
+- Force hdmi output to never blank by adding hdmi-safe = 1 in /boot/config.txt. It is also suggested to change the lightDM configuartion by adding:  to the file. 
+- If your Rpi randomly shuts down or keeps blanking screen after applying previous modifications, you may have a power supply issue either by hdmi faulty cable or power adapter failure. 
+- Bear in mind that there is a connection issue at the power connector of Pi4 that can produce overheating and faulty events if the power source is not the one specified by the manufacturer as stated in forums. 
+- If the board keeps failing, try to replace it for a new one you may have a defectuous one. Many posts have recently appear in this regard in [official forums].
+
 # References
 [1] Venkata SM Gudlavalleti  et al. "Public health system integration of avoidable blindness screening and management, India". Bulletin of the World Health Organization . Aug 2018. [Online] https://www.who.int/bulletin/volumes/96/10/18-212167/en/
 

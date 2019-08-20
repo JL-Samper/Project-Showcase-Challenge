@@ -14,7 +14,7 @@ Retinal affections is one of the major causes of blindness in the population. Ea
 
 Among retinal affections, Diabetic Retinopathy (DR) has a high incidence rate [2]. During the last decade, big efforts have been done to obtain machine learning models able to detect the illness and diagnose it, like the population of journal articles and competitions denote. A successfull and useful diagnosis system should not only have a high accuracy, but also deliver scalability, data safety and usability. In this regard, a multiplatform application for retinal imaging diagnoses that applies federated learning methods can have a real impact and migration to real scenearios where medical personnel and patients interact with it.  
 
-In this document we present a federated learning application that serves from state of the art methods for image recognition and classification to diagnose degenerative retinopathy. The system detects five different states of the retina and can be embedded in different devices, from computers to embedded boards. Currently, we are focusing on raspberry pi 4, and pc, but the future prospect also includes migration to mobile devices and other boards.
+In this document we present a federated learning application that serves from state of the art methods for image recognition and classification to diagnose diabetic retinopathy. The system detects five different states of the retina and can be embedded in different devices, from computers to embedded boards. Currently, we are focusing on raspberry pi 4, and pc, but the future prospect also includes migration to mobile devices and other boards.
 
 # Introduction
 

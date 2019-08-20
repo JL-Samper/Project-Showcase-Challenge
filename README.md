@@ -61,6 +61,7 @@ To approach such an architecture we have 2 PCs, one running Ubuntu Bionic and an
 
 The federated learning environment is done with PySyft following OpenMined guidelines for websockets. After troubleshooting some issues with raspberry pi 4 installation and power sortages we have been able to run a simple example for MNIST dataset using websockets between OSX and RPi4. We are starting the implementation of the transfer-learning neural algorihtm, explained in previous subsection, in this scheme. 
 
+![alt_text](https://media.discordapp.net/attachments/602098962719309856/613348507356626957/unknown.png)
 
 # Troubleshooting and guides
 

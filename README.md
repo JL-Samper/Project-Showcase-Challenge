@@ -1,4 +1,4 @@
-# Project-Showcase-Challenge: A Federated approach for Degenerative Retinopathy diagnosis 
+# Project-Showcase-Challenge: A Federated approach for Diabetic Retinopathy diagnosis 
 ##### Udacity and Facebook Private and Secure AI Challenge
 
 ### Developers:

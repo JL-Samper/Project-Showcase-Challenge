@@ -49,7 +49,7 @@ The dataset is not evenly-representative of these labels. As the following chart
 ![alt_text](https://cdn.discordapp.com/attachments/602098962719309856/604644893884940289/unknown.png)
 
 To avoid bias and overfitting towards healthy eyes, we have downsized the dataset to have an evenly-distributed population of samples. Additionally, images are preprocessed to avoid format-related bias [14] by applying crop and normalization methods. 
-The accuracy obtained has been 
+The accuracy obtained is around 89%.
 
 Some authors like Fleming[5] and Habib[6] have reported the benefits in assembled classification when applying vessel removal and an exhaustive preprocessing to highlight the retinal symptons under study. In our opinion, adding a red-color discriminant, fundus correction and vessel extraction can boost accuracy since the result will provide a simplified image with the imperfections of the retina. We will also have to deal with the induced artifacts resulting from the preprocessing algorithm as other authors have already stated [6]. We are currently working on this implementations which we plan to carry out with OpenCV and PyTorch. 
 

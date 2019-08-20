@@ -30,8 +30,7 @@ Attempts to improve performance and diagnosis have eventually led to the usage o
 
 Similar results have already been obtained for glaucoma. Glaucoma is an affection of the optical nerve whose diagnoses can only be done by medical eye experts. Its detection is really complex due to the fundus variance and shape of retina symptoms [10]. In this context, convolutional models with six or less layers reach accuracies around 83% [11], whereas deeper models increase performance to 93% [12]. 
 
-In consequence there is a great interest in obtaining neural models for retinal disease diagnosis and the results are promising. Deep Learning and technological development allow designing complexer models that push performance forward. However, there are important topics that have to be addressed in order to migrate these systems to society which can hamper the adoption of the technology by the big public. These topics are related with real-case implementation, user's privacy and safety. To our knowledge, there is no specific work already done to approach a federated learning model that diagnoses retinal affections while preserves user's privacy. In this project we create a federated learning architecture with a pc and a raspberry pi 4 that hosts several workers to diagnose diabetic retinopathy. Additionally, different neural models have been evaluated to boost performance which currently include: simple convolutional networks (2 to six layers), high-depth convolutional models and GANs.  
-
+In consequence, there is a great interest in obtaining neural models for retinal disease diagnosis and the results are promising. Deep Learning and technological development allow designing complexer models that push performance forward. However, there are important topics that have to be addressed in order to migrate these systems to society which can hamper the adoption of the technology by the big public. These topics are related with real-case implementation, user's privacy and safety. To our knowledge, there is no specific work already done to approach a federated learning model that diagnoses retinal affections while preserves user's privacy. In this project we create a federated learning architecture with a pc and a raspberry pi 4 that hosts several workers to diagnose diabetic retinopathy. Additionally, different neural models have been evaluated to boost performance which currently include: simple convolutional networks (2 to six layers), high-depth convolutional models and GANs.   The system are trained and tested using Kaggle competition databases for DR detection from 2015 and 2019.
 
 # System Overview
 
@@ -48,9 +47,18 @@ In consequence there is a great interest in obtaining neural models for retinal 
 
 [4] "Facts About Diabetic Eye Disease". National Eye Institute. [Online] https://nei.nih.gov/health/diabetic/retinopathy
 
-[5]
+[5] Alan D. Fleming et al. "Automated Microaneurysm Detection Using Local Contrast Normalization and Local Vessel Detection". IEEE TRANSACTIONS ON MEDICAL IMAGING, Vol. 25, No. 9, Sept 2006. 
 
 [6] Habib et al. "Detection of microaneurysms in retinal images using an ensemble classifier". Informatics in Medicine Unlocked. 2017. 
 
-[] Annahita Forghan et al. "Can AI Detect Diabetic Retinopathy More Accurately?". Diabetes in Control. Jan 2019. [Online] http://www.diabetesincontrol.com/can-ai-detect-diabetic-retinopathy-more-accurately/
+[7] Annahita Forghan et al. "Can AI Detect Diabetic Retinopathy More Accurately?". Diabetes in Control. Jan 2019. [Online] http://www.diabetesincontrol.com/can-ai-detect-diabetic-retinopathy-more-accurately/
 
+[8] Mohamed Shaban et al. "Automated staging of Diabetic Retinopathy Using a 2D Convolutional Neural Network". AMIA Jt Summits Transl Sci Proc. 2018; 2018: p147–155. 
+
+[9] Cecilia S. Lee et al. "Deep Learning Is Effective for Classifying Normal versus Age-Related Macular Degeneration OCT Images". American Academy of Ophthalmology. 2016.
+
+[10] Age-Related Macular Degeneration (AMD). Columbia University Department of Ophthalmology. [Online] https://www.columbiaeye.org/eye-library/age-related-macular-degeneration.
+
+[11] Xiangyu Chen et al. "Glaucoma detection based on deep convolutional neural network".  2015 37th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC). Aug 2015.
+
+[12] Manal Al Ghamdi et al. " Semi-supervised Transfer Learning for Convolutional Neural Networks for Glaucoma Detection".  ICASSP 2019 - 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). May 2019.  

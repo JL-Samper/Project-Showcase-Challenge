@@ -61,8 +61,24 @@ To approach such an architecture we have 2 PCs, one running Ubuntu Bionic and an
 
 The federated learning environment is done with PySyft following OpenMined guidelines for websockets. After troubleshooting some issues with raspberry pi 4 installation and power sortages we have been able to run a simple example for MNIST dataset using websockets between OSX and RPi4. We are starting the implementation of the transfer-learning neural algorihtm, explained in previous subsection, in this scheme. 
 
+![alt_text](https://media.discordapp.net/attachments/602098962719309856/613348507356626957/unknown.png)
 
 # Troubleshooting and guides
+
+During Raspberry Pi 4 set up with PySyft and Pytorch some issues have been found. We have based on [OpenMined Tutorial](https://blog.openmined.org/federated-learning-of-a-rnn-on-raspberry-pis/) to set RPi 3B+ for federated RNN. Issues and troubleshooting that we have faced can be sum up as follows:
+
+- Pytorch and Syft wheels in pip3 work properly but you need to pay attention to the version installed. The best options is forcing the installation of the version you need to this end check [syft requirements](https://github.com/OpenMined/PySyft). If you don't force the installation you may end with a torch version like "vX.X.XX.post2" which will create several issues in further wheels installations. 
+- Upgrade pip version installed with raspbian so new dependencies and wheels can be found.
+- Avoid screen blanking by installing xscreensaver and disabling screensaver (Preferences --> screensaver)
+- Force hdmi output to never blank by adding 
+    > hdmi-safe = 1 
+    > in /boot/config.txt. 
+- It is [also suggested](https://www.raspberrypi.org/forums/viewtopic.php?t=139538) to change the lightDM configuration to disable blanking by adding: 
+    > xserver-command=X -s 0 -dpms 
+    > to /etc/lightdm/lightdm.conf the file. 
+- If your Rpi randomly shuts down or keeps blanking screen after applying previous modifications, you may have a power supply issue either by hdmi faulty cable or power adapter failure. 
+- Bear in mind that there is a connection issue at the power connector of Pi4 that can produce overheating and faulty events if the power source is not the one specified by the manufacturer as [stated in different sources](https://hackaday.com/2019/07/16/exploring-the-raspberry-pi-4-usb-c-issue-in-depth/). 
+- If the board keeps failing, try to replace it for a new one you may have a defectuous one. Many posts have recently appear in this regard in [forums](https://hackaday.com/2019/06/28/power-to-the-pi-4-some-chargers-may-not-make-the-grade/).
 
 # References
 [1] Venkata SM Gudlavalleti  et al. "Public health system integration of avoidable blindness screening and management, India". Bulletin of the World Health Organization . Aug 2018. [Online] https://www.who.int/bulletin/volumes/96/10/18-212167/en/

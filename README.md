@@ -2,11 +2,11 @@
 Udacity and Facebook Private and Secure AI Challenge
 
 # Developers:
-- ThienAn.  
-      Slack user: ThienAn
+- ThienAn. 
+      Slack user: ThienAn.
       Github: thienan092
-- José Luis Samper (jluis.samper@gmail.com)
-      Slack user: J. Luis Samper
+- José Luis Samper. (jluis.samper@gmail.com).
+      Slack user: J. Luis Samper.
       Github: JL-Samper
 
 # Abstract
@@ -30,6 +30,7 @@ Attempts to improve performance and diagnosis have eventually led to the usage o
 
 Similar results have already been obtained for glaucoma. Glaucoma is an affection of the optical nerve whose diagnoses can only be done by medical eye experts. Its detection is really complex due to the fundus variance and shape of retina symptoms [10]. In this context, convolutional models with six or less layers reach accuracies around 83% [11], whereas deeper models increase performance to 93% [12]. 
 
+In consequence there is a great interest in obtaining neural models for retinal disease diagnosis and the results are promising. Deep Learning and technological development allow designing complexer models that push performance forward. However, there are important topics that have to be addressed in order to migrate these systems to society which can hamper the adoption of the technology by the big public. These topics are related with real-case implementation, user's privacy and safety. To our knowledge, there is no specific work already done to approach a federated learning model that diagnoses retinal affections while preserves user's privacy. In this project we create a federated learning architecture with a pc and a raspberry pi 4 that hosts several workers to diagnose diabetic retinopathy. Additionally, different neural models have been evaluated to boost performance which currently include: simple convolutional networks (2 to six layers), high-depth convolutional models and GANs.  
 
 
 # System Overview

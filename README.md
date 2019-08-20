@@ -2,12 +2,12 @@
 Udacity and Facebook Private and Secure AI Challenge
 
 # Developers:
-- ThienAn. 
-      * Slack user: ThienAn.
-      * Github: thienan092
-- José Luis Samper. (jluis.samper@gmail.com).
-      * Slack user: J. Luis Samper.
-      * Github: JL-Samper
+- ThienAn
+     * Slack user: ThienAn
+     * Github: thienan092
+- José Luis Samper (jluis.samper@gmail.com)
+     * Slack user: J. Luis Samper
+     * Github: JL-Samper
 
 # Abstract
 Retinal affections is one of the major causes of blindness in the population. Early detection and appropiate treatment are crucial to stop the progress of the illness. Diagnoses relies on the expertise and visual acuteness of the ophthalmologist to detect retinal symptoms [xx]. The oculist checks the retina of both eyes by using special magnifying glasses and scan images, which alongside the patient's records provide information enough to detect the illness in most of the cases. However, a part of the population is highly exposed to late detection either by inability to afford the medical examination, lack of awareness or retina experts high-occupation. 
@@ -34,7 +34,7 @@ In consequence, there is a great interest in obtaining neural models for retinal
 
 # System Overview
 
-The system can be mainly divided in two parts: the neural network and the federated environment. The former covers the design of the neural algorithm and its performance for DR diagnosis using kaggle datasets (), whereas the latter covers the integration of the neural network in a federated architecture. The whole development have been done with PyTorch and PySyft. 
+The system can be mainly divided in two parts: the neural network and the federated environment. The former covers the design of the neural algorithm and its performance for DR diagnosis using [kaggle datasets](https://www.kaggle.com/benjaminwarner/resized-2015-2019-blindness-detection-images), whereas the latter covers the integration of the neural network in a federated architecture. The whole development have been done with PyTorch and PySyft. 
 
 ##### Neural Network Implementation
 
@@ -49,14 +49,13 @@ The dataset is not evenly-representative of these labels. As the following chart
 ![alt_text](https://cdn.discordapp.com/attachments/602098962719309856/604644893884940289/unknown.png)
 
 To avoid bias and overfitting towards healthy eyes, we have downsized the dataset to have an evenly-distributed population of samples. Additionally, images are preprocessed to avoid format-related bias [13] by applying crop and normalization methods. 
-The accuracy obtained has been
+The accuracy obtained has been 
+
 Some authors like Fleming[5] and Habib[6] have reported the benefits in assembled classification when applying vessel removal and an exhaustive preprocessing to highlight the retinal symptons under study. In our opinion, adding a red-color discriminant, fundus correction and vessel extraction can boost accuracy since the result will provide a simplified image with the imperfections of the retina. We will also have to deal with the induced artifacts resulting from the preprocessing algorithm as other authors have already stated [6]. We are currently working on this implementations which we plan to carry out with OpenCV and PyTorch. 
 
 ### Federated Learning
 
 
-
-# Results
 
 # Troubleshooting and guides
 
@@ -84,3 +83,5 @@ Some authors like Fleming[5] and Habib[6] have reported the benefits in assemble
 [11] Xiangyu Chen et al. "Glaucoma detection based on deep convolutional neural network".  2015 37th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC). Aug 2015.
 
 [12] Manal Al Ghamdi et al. " Semi-supervised Transfer Learning for Convolutional Neural Networks for Glaucoma Detection".  ICASSP 2019 - 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). May 2019.  
+
+[13] Tom Aindow. "Be careful what you train on. Kaggle APTOS competitions". [Online] https://www.kaggle.com/taindow/be-careful-what-you-train-on

@@ -4,7 +4,7 @@ Udacity and Facebook Private and Secure AI Challenge
 # Developers:
 - ThienAn.  
       Slack user: ThienAn
-      Github: 
+      Github: thienan092
 - José Luis Samper (jluis.samper@gmail.com)
       Slack user: J. Luis Samper
       Github: JL-Samper
@@ -24,7 +24,9 @@ Diabetic retinopathy (DR) is among the most-common retinal affections with a 31,
 
 ![alt text](https://media.discordapp.net/attachments/602098962719309856/602109554930614273/nrdp201612-f4.png)
 
-So as to enhance diagnosis and preventive cares, several studies and challenges of machine learning models for DR detection have populated during the last decades. Some authors advocate for preprocessing and manual design of  
+So as to enhance diagnosis and preventive cares, several studies and challenges of machine learning models for DR detection have populated during the last decades. Some authors advocate for preprocessing and manual design of detectors. In these studies, several processing techniques are applied to highligth the retinal symptoms of retinopathy which are then classified by applying different types of functions like the feature candidates proposed by Flemming [6]. Habib et al [6] have recently analysed 70 features of retinal images and their impact on decision candidates performance. The retinal images are preprocessed by applying salt and pepper methods, surf and a vessel removal technique, developed by the authors. Then a decision tree classifies each of the symptoms detected by analysing the response of a series of weak classifiers. 
+
+
 # System Overview
 
 # Results
@@ -39,6 +41,10 @@ So as to enhance diagnosis and preventive cares, several studies and challenges 
 [3] Christian Nordqvist. "Diabetic retinopathy: Causes, symptoms, and treatments". Medical News Today. August 2017. [Online] 
 
 [4] "Facts About Diabetic Eye Disease". National Eye Institute. [Online] https://nei.nih.gov/health/diabetic/retinopathy
+
+[5]
+
+[6] Habib et al. "Detection of microaneurysms in retinal images using an ensemble classifier". Informatics in Medicine Unlocked. 2017. 
 
 [] Annahita Forghan et al. "Can AI Detect Diabetic Retinopathy More Accurately?". Diabetes in Control. Jan 2019. [Online] http://www.diabetesincontrol.com/can-ai-detect-diabetic-retinopathy-more-accurately/
 
